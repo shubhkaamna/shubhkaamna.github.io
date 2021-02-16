@@ -1,0 +1,239 @@
+@font-face {
+	font-family: 'Samarkan';
+	src: url("../fonts/samarkan.TTF")
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+	background: url("../img/stars.png"), rgb(0,0,0);
+	animation: tara-labuk-jabuk 300s linear infinite;
+	color: #fff;
+}
+.swal-overlay {
+	background: rgba(255, 166, 24, 0.856);
+}
+.navbar {
+	padding: 20px;
+	background: rgb(255, 180, 19);
+	color: #000;
+	position: sticky;
+	top: 0;
+	z-index:2;
+	.title {
+		font-family: 'Samarkan';
+		text-shadow: 0 4px 4px rgba(73, 73, 73, 0.70);
+		font-size: 2em;
+		font-weight: 500;
+	}
+}
+.top-header {
+	display: flex;
+	align-items: center;
+}
+.diya {
+	width: 100px;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: #0D2149;
+	background: url("../img/clouds.png");
+	background-repeat: repeat-x;
+	background-position-y: center;
+	
+	min-height: 100vh;
+	height: 100%;
+	padding: 20px;
+	animation: move-clouds-back 60s infinite linear;
+}
+
+.content-area {
+	max-width: 800px;
+	width: 100%;
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px;
+	border-radius: 20px;
+
+
+	.title {
+		text-align: center;
+		text-shadow: 0 4px 4px rgb(255, 123, 0);
+		animation: zoom-text 1s infinite reverse linear;
+	}
+
+	.text {
+		margin-top: 20px;
+	}
+
+	.title-image {
+		margin-top: 20px;
+		max-width: 400px;
+		width: 100%;
+		height: auto;
+	}
+
+	.author-wish {
+		margin-top: 20px;
+		max-width: 600px;
+		width: 100%;
+		.author {
+			font-weight: 600;
+		}
+	}
+
+	.wish {
+		margin-top: 16px;
+		text-align: center;
+		max-width: 600px;
+		width: 100%;
+		font-size: 1.1em;
+		font-weight: 600;
+		text-shadow: 0 2px 2px rgba(255, 123, 0, 0.5);
+		position: relative;
+		&::before {
+			position: absolute;
+			top: -25px;
+			left: -10px;
+			content: open-quote;
+			font-family: 'Times New Roman', Times, serif;
+			font-weight: 600px;
+			font-size: 40px;
+		}
+	}
+
+	hr {
+		margin-top: 20px;
+		border: 1px solid rgba(255,255,255,0.6);
+		width: 80%;
+	}
+
+	.create {
+		margin-top: 20px;
+		max-width: 400px;
+		width: 100%;
+		.create-form {
+			display: flex;
+			justify-content: center;
+			.create-input-container {
+				width: 200px;
+				border: 0;
+				padding: 8px;
+				border-radius: 4px 0 0 4px;
+				outline: 0;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+			}
+			.submitbtn {
+				padding: 8px;
+				border: 0;
+				border-radius: 0 4px 4px 0;
+				background: rgb(163, 114, 255);
+				color: #fff;
+				font-size: 0.7em;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+				font-family: 'Poppins', sans-serif;
+			}
+		}
+	}
+}
+.social-container {
+	margin-top: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	a {
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 6px;
+		border-radius: 50%;
+		background: #000;
+		color: #fff;
+		text-decoration: none;
+		box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+		animation: zoom-icon 1s infinite reverse linear;
+	}
+	.facebook {
+		background: #4267B2 !important;
+	}
+	.twitter {
+		background: #1DA1F2 !important;
+	}
+	.whatsapp {
+		background: #25D366 !important;
+	}
+}
+
+
+.columns {
+	max-width: 1000px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 60px;
+	background: rgb(255, 232, 209);
+	// background: rgb(255, 249, 228);
+	color: #000;
+	padding: 20px;
+}
+.youtube-video {
+	width: 100%;
+	max-width: 638px;
+	height: 358px;
+	margin-top: 40px;
+	border: 0;
+}
+
+.footer {
+	background: #0e0b16;
+	color: #fff;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	text-align: center;
+	padding: 20px;
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		padding: 0;
+	}
+	.columns {
+		grid-template-columns: 1fr;
+	}
+	.om {
+		width: 100px;
+		height: 100px;
+	}
+}
+@keyframes tara-labuk-jabuk {
+	from {background-position:0 0;}
+    to {background-position: -10000px 5000px};
+}
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@keyframes zoom-text {
+	0%, 100% { transform: scale(1);	}
+	50%{ transform: scale(1.1); }
+}
+@keyframes zoom-icon {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.05); }
+}
