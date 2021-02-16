@@ -42,9 +42,19 @@ const urlParams = new URLSearchParams(window.location.search);
 const username = urlParams.get('name');
 console.log(username);
 
+const facebookEl = document.querySelector("#facebooklink");
+const twitterEl = document.querySelector("#twitterlink");
+const whatsappEl = document.querySelector("#whatsapplink");
+
 if (username == null || username == undefined || username === "") {
 	message = "हमारी तरफ से,";
+	facebookEl.href = "https://www.facebook.com/sharer/sharer.php?u=shubhkaamna.site";
+	twitterEl.href = `https://twitter.com/share?text=महाशिवरात्रि की हार्दिक शुभकामनायें&url=${window.location}`;
+	whatsappEl.href = `https://wa.me/send?text=🚩 महाशिवरात्रि की हार्दिक शुभकामनायें 🚩%0Aआपके लिए विशेष सन्देश है%0Aयहाँ पे क्लिक करे 👇%0A ${window.location}`;
 } else {
-	message = username + " की तरफ से";
+	facebookEl.href = "https://www.facebook.com/sharer/sharer.php?u=shubhkaamna.site";
+	twitterEl.href = `https://twitter.com/share?text=महाशिवरात्रि की हार्दिक शुभकामनायें%0A${username} ने आपके लिए विशेष सन्देश भेजा है 👇%0A ${window.location}`;
+	whatsappEl.href = `https://wa.me/send?text=🚩 महाशिवरात्रि की हार्दिक शुभकामनायें 🚩%0A*${username}* ने आपके लिए विशेष सन्देश भेजा है%0Aयहाँ पे क्लिक करे 👇%0A ${window.location}`;
+	message = "<span class='username'>" + username + "</span> की तरफ से";
 }
 authorEl.innerHTML = message;

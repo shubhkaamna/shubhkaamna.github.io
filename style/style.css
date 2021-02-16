@@ -114,12 +114,18 @@ body {
 
 .content-area .author-wish {
   margin-top: 20px;
-  max-width: 600px;
+  text-align: center;
   width: 100%;
 }
 
 .content-area .author-wish .author {
   font-weight: 600;
+}
+
+.content-area .author-wish .author .username {
+  text-shadow: 0 4px 4px #fb9b00;
+  font-size: 32px;
+  margin-right: 12px;
 }
 
 .content-area .wish {
