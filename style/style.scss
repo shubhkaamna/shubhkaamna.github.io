@@ -23,6 +23,8 @@ body {
 	position: sticky;
 	top: 0;
 	z-index:2;
+	transition: 0.2s;
+	box-shadow: 0 20px 20px rgba(0,0,0,0.15);
 	.title {
 		font-family: 'Samarkan';
 		text-shadow: 0 4px 4px rgba(73, 73, 73, 0.70);
@@ -131,6 +133,9 @@ body {
 		.create-form {
 			display: flex;
 			justify-content: center;
+			.text {
+				width: 100%;
+			}
 			.create-input-container {
 				width: 200px;
 				border: 0;

@@ -30,6 +30,10 @@ body {
   position: sticky;
   top: 0;
   z-index: 2;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.15);
 }
 
 .navbar .title {
@@ -168,6 +172,10 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.content-area .create .create-form .text {
+  width: 100%;
 }
 
 .content-area .create .create-form .create-input-container {
