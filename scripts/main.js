@@ -58,3 +58,20 @@ if (username == null || username == undefined || username === "") {
 	message = "<span class='username'>" + username + "</span> की तरफ से";
 }
 authorEl.innerHTML = message;
+
+
+
+setTimeout(function () {
+	swal({
+		title: "Play Bhajan?",
+		icon: 'info',
+		buttons: ["Cancel", "Play"],
+		dangerMode: true
+	})
+		.then((e) => {
+			if (e) {
+				alert("PLay");
+				new Audio('./audio/shivratri.mp3').play();
+			}
+		})
+}, 15000);
