@@ -1,23 +1,5 @@
 <!--
-	!TODO: Add social media
-	!TODO: हमारी तरफ से & Insert name
-	!TODO: Share to social media
-	!TODO: Mobile Responsive
-	!TODO: Video Placeholder
-	!TODO: Change Image
-	!TODO: meta description
-	!TODO: Meta Image
-	!TODO: Design Update
-	!TODO: navbar
-	!TODO: Update footer
-	!TODO: Description for Google Crawler
-	!TODO: Add logo
-	!TODO: Add background bhajans with controls
-	
-	TODO: SEO & optimization
 	TODO: Analytics & Adsense
-
-	?Tara labuk jabuk = https://codepen.io/stealy/pen/zYxXpza
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -57,21 +39,31 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./style/style.css">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-T9NHHHHJKW"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-T9NHHHHJKW');
+	</script>
 </head>
 
 <body>
-	<div class="navbar">
-		<h2 class="title">Shubh Kaamna</h2>
+	<div class="navbar" id="navbar">
+		<h2 class="title" id="page-title">Shubh Kaamna</h2>
 	</div>
 	<main class="container">
 		<div class="top-header">
-			<img src="./img/diya.png" class="diya" />
-			<img src="./img/om.png" class="om" />
-			<img src="./img/diya.png" class="diya" />
+			<img src="./img/diya.png" alt="Diya" class="diya" />
+			<img src="./img/om.png" alt="Om | ShubhKaamna" class="om" />
+			<img src="./img/diya.png" alt="Diya" class="diya" />
 		</div>
 		<section class="content-area">
 			<h2 class="title">🚩 महाशिवरात्रि की हार्दिक शुभकामनायें 🚩</h2>
-			<img src="./img/shiva33.png" class="title-image" />
+			<img src="./img/shiva33.png" class="title-image" alt="MahaShivratri | Shubhkaamna" />
 
 			<p class="author-wish">
 				<span class="author" id="author"></span>
@@ -81,11 +73,13 @@
 			<hr />
 
 			<div class="create">
-				<p class="create-text">
+				<p class="text">
 					आप भी बनाये,
 				</p>
 				<form class="create-form" method="GET" action="index.html">
-					<input type="text" class="create-input-container" placeholder="अपना नाम लिखे.." name="name" />
+					<label for="text">&nbsp;</label>
+					<input type="text" class="create-input-container" placeholder="अपना नाम लिखे.." id="text"
+						name="name" />
 					<button class="submitbtn">Create</button>
 				</form>
 			</div>
@@ -106,11 +100,11 @@
 				<iframe class="youtube-video"
 					src="https://drive.google.com/file/d/1MtuZdCjG7-OFKG6YYsPCaAVb0NNRVdC2/preview" frameborder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen></iframe>
+					allowfullscreen title="Shivrattri Video"></iframe>
 
 				<iframe class="youtube-video" src="https://www.youtube.com/embed/KKJ4VbHPTik" frameborder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen></iframe>
+					allowfullscreen title="Shivrattri Video"></iframe>
 			</div>
 
 			<div class="right-side">
@@ -171,26 +165,20 @@
 
 		<p class="copy">&copy; 2021</p>
 	</footer>
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
 	<script>
-
-		setTimeout(function () {
-			swal({
-				title: "Play Bhajan?",
-				icon: 'info',
-				buttons: ["Cancel", "Play"],
-				dangerMode: true
-			})
-				.then((e) => {
-					if (e) {
-						alert("PLay");
-						new Audio('./audio/shivratri.mp3').play();
-					}
-				})
-		}, 15000);
+		const navbar = document.querySelector("#navbar");
+		window.onscroll = () => {
+			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+				navbar.style.padding = "8px";
+				navbar.style.fontSize = "1em";
+			} else {
+				navbar.style.padding = "20px";
+				navbar.style.fontSize = "1.2em";
+			}
+		}
 	</script>
 
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
 
 	<script src="./scripts/main.js" defer></script>
 
